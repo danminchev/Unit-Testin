@@ -4,28 +4,45 @@ namespace TestApp.UnitTests;
 
 public class StringReverseTests
 {
-    // TODO: finish test
+   
     [Test]
     public void Test_Reverse_WhenGivenEmptyString_ReturnsEmptyString()
     {
         // Arrange
+        string input = string.Empty;
 
         // Act
-        //StringReverse.Reverse(input);
+        string actual = StringReverse.Reverse(input);
 
         // Assert
-        //Assert.AreEqual();
+         Assert.AreEqual(string.Empty, actual);
     }
 
     [Test]
     public void Test_Reverse_WhenGivenSingleCharacterString_ReturnsSameCharacter()
     {
-        // TODO: Write your test here...
+        // Arrange
+        string input = "X";
+
+        // Act
+        string actual = StringReverse.Reverse(input);
+
+        // Assert
+        Assert.AreEqual(1, input.Length);
+        Assert.AreEqual("X", actual);
     }
 
     [Test]
     public void Test_Reverse_WhenGivenNormalString_ReturnsReversedString()
     {
-        // TODO: Write your test here...
+        // Arrange
+        string input = "XYZ";
+
+        // Act
+        string actual = StringReverse.Reverse(input);
+
+        // Assert
+        Assert.AreEqual(input.Length, actual.Length);
+        Assert.AreEqual("ZYX", actual);
     }
 }

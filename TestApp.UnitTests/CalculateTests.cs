@@ -5,7 +5,7 @@ namespace TestApp.UnitTests;
 public class CalculateTests
 {
     [Test]
-    public void Test_Addition()
+    public void Test_AdditionWhenParameteresArePositive()
     {
         // Arrange
         Calculate calculator = new();
@@ -18,8 +18,28 @@ public class CalculateTests
     }
 
     [Test]
-    public void Test_Subtraction()
+    public void Test_AdditionWhenParametersAreNegative()
     {
-        // TODO: Write your test here...
+        //Arrange 
+        Calculate calculator = new();
+
+        //act
+        int actual = calculator.Addition(-5, -2);
+
+        //Assert
+        Assert.AreEqual(-7, actual);
+    }
+
+    [Test]
+    public void Test_SubtractionWhenParametersArePositive()
+    {
+       // Arrange
+        Calculate calculator = new();
+  
+        // Act
+        int actual = calculator.Subtraction(5, 2);
+
+        // Assert
+        Assert.AreEqual(3, actual, "Subtraction did not work properly."); 
     }
 }
