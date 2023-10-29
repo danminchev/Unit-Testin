@@ -9,4 +9,9 @@ public class Reverse
         Array.Reverse(arr);
         return string.Join(" ", arr);
     }
+
+    public static string[] ReverseStrings(string[] inputArray)
+    {
+        throw new NotImplementedException();
+    }
 }
